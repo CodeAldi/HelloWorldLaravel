@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        "tittle" => "home"
+    ]);
+});
+
+Route::get('/about', function () {
+    return view('about', [
+        "tittle" => "about"
+    ]);
+});
+
+Route::get('/kontak', function () {
+    return view('kontak', [
+        "tittle" => "kontak"
+    ]);
 });
